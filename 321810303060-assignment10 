@@ -1,0 +1,170 @@
+###1.Write a Python program which iterates the integers from 1 to 100. For multiples of three print "Fizz" instead of the number and for the multiples of five print "Buzz". For numbers which are multiples of both three and five print "FizzBuzz".
+
+for fizzbuzz in range(101):
+    if fizzbuzz % 3 == 0 and fizzbuzz % 5 == 0:
+        print("fizzbuzz")
+        continue
+    elif fizzbuzz % 3 == 0:
+        print("fizz")
+        continue
+    elif fizzbuzz % 5 == 0:
+        print("buzz")
+        continue
+    print(fizzbuzz)
+	
+#output:-fizzbuzz
+#1
+#2
+#fizz
+#4
+#buzz
+#fizz
+#7
+#8
+#fizz
+#buzz
+#11
+#fizz
+#13
+#14
+#fizzbuzz
+#16
+#17
+#fizz
+#19
+#buzz
+#fizz
+#22
+#23
+#fizz
+#buzz
+#26
+#fizz
+#28
+#29
+#fizzbuzz
+#31
+#32
+#fizz
+#34
+#buzz
+#fizz
+#37
+#38
+#fizz
+#buzz
+#41
+#fizz
+#43
+#44
+#fizzbuzz
+#46
+#47
+#fizz
+#49
+#buzz
+#fizz
+#52
+#53
+#fizz
+#buzz
+#56
+#fizz
+#58
+#59
+#fizzbuzz
+#61
+#62
+#fizz
+#64
+#buzz
+#fizz
+#67
+#68
+#fizz
+#buzz
+#71
+#fizz
+#73
+#74
+#fizzbuzz
+#76
+#77
+#fizz
+#79
+#buzz
+#fizz
+#82
+#83
+#fizz
+#buzz
+#86
+#fizz
+#88
+#89
+#fizzbuzz
+#91
+#92
+#fizz
+#94
+#buzz
+#fizz
+#97
+#98
+#fizz
+#buzz
+
+###2.Write a Python program to remove consecutive duplicates from list.
+
+from itertools import groupby  
+test_list = [1, 4, 4, 4, 5, 6, 7, 4, 3, 3, 9,5] 
+print ("The original list is : " + str(test_list)) 
+res = [i[0] for i in groupby(test_list)] 
+print ("The list after removing consecutive duplicates : " +  str(res)) 
+
+#output:-The original list is : [1, 4, 4, 4, 5, 6, 7, 4, 3, 3, 9,5]
+#The list after removing consecutive duplicates : [1, 4, 5, 6, 7, 4, 3, 9,5]	
+
+###3. Write a python program to find unique element from a list.
+
+my_list = [10, 20, 30, 40, 20, 50, 60, 40]
+print("Original List : ",my_list)
+my_set = set(my_list)
+my_new_list = list(my_set)
+print("List of unique numbers : ",my_new_list)
+		
+#output:-Original List :  [10, 20, 30, 40, 20, 50, 60, 40]                                                             
+#List of unique numbers :  [40, 10, 50, 20, 60, 30]
+
+###4.Write a function that checks whether a number is in a given range (inclusive of high and low )
+
+def ran_check(num,low,high):
+    for i in range(low,high+1):
+        if num==i:
+            print ('Number is within the range')
+            break
+    else :
+            print ('Number is out of range')
+ran_check(3,1,10)
+
+#output:- Number is within the range
+ 
+###5.Write a Python function that accepts a string and calculates the number of upper case letters and lower case letters.
+#HINT: Two string methods that might prove useing .isupper() and.islower()
+
+def up_low(s):
+    ucount=0
+    lcount=0
+    for letter in s:
+            if str.isupper(letter):
+                ucount+=1
+            elif str.islower(letter):
+                lcount+=1
+    print('count of upper case characters in string is '+str(ucount))
+    print('count of lower case characters in string is '+str(lcount))
+up_low('Hello Mr. Rogers, how are you this fine Tuesday?')
+
+#output:-
+#count of upper case characters in string is 4
+#count of lower case characters in string is 33
+
